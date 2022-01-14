@@ -24,7 +24,30 @@ var app = new Vue({
                 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
             ],
             
+        },        
+        activeIndex: 0
+    },
+    methods:{
+        active:function(index){
+        return index == this.activeIndex ? "sy-active" :  "" 
         },
-        cont: 0
+        activethumb:function(index){
+            return index == this.activeIndex ? "sy-active-thumb" :  "" 
+        },
+        nextImage:function(){
+            this.activeIndex++;
+            if(this.activeIndex>4){
+                this.activeIndex=0
+            }
+        },
+        prevImage:function(){
+            this.activeIndex--;
+            if(this.activeIndex<0){
+                this.activeIndex=4
+            }
+        },
     }
 });
+
+
+

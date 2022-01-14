@@ -14,21 +14,23 @@
     <div class="vh-100 d-flex align-items-center justify-content-center">
         <div id="app" class=" sy_carosello d-flex">
             <div  class="sy_left_image position-relative">
-                <!-- IMMAGINE LEFT DA LOOPARE  -->
-                <img v-for="(element,index) in items.img" class="w-100 h-100" :src="items.img[index]">
-
+                
                 <div id="description" class="w-100 h-100 position-absolute d-flex flex-column justify-content-end align-items-end">
                 <!-- TESTO DA LOOPARE  -->
+                    <h3 class="text-white me-5">{{items.title[activeIndex]}}</h1>
+                    <p class="text-white text-end me-5">{{items.text[activeIndex]}}</p>
                 </div>
+                <!-- IMMAGINE LEFT DA LOOPARE  -->
+                <img v-for="(element,index) in items.img" :class="active(index)" class="w-100 h-100 sy-d-off" :src="items.img[index]">
             </div>
             <div class="sy_right_image d-flex flex-column">
                 <!-- IMMAGINE RIGHT DA LOOPARE  -->
                 <div v-for="(element,index) in items.img" class="sy_thumb">
-                    <img class="sy_image_contain" :src="items.img[index]" alt="">
+                    <img class="sy_image_contain " :class="activethumb(index)" :src="items.img[index]" @click="activeIndex = index" alt="">
                 </div>
 
-                    <a id="prev" class="sy_icons sy-prev-arrow" href="#"><i class=" bi bi-arrow-up-circle-fill"></i></a>
-                    <a id="next" class="sy_icons sy-next-arrow" href="#"><i class=" bi bi-arrow-down-circle-fill"></i></a>
+                    <a id="prev" class="sy_icons sy-prev-arrow" @click="prevImage"  href="#"><i class=" bi bi-arrow-up-circle-fill"></i></a>
+                    <a id="next" class="sy_icons sy-next-arrow" @click="nextImage" href="#"><i class=" bi bi-arrow-down-circle-fill"></i></a>
             </div>
         </div>
     </div>

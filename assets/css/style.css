@@ -24,7 +24,7 @@ body{
 .sy_thumb{
     height: 20%;
     width: 100%;
-    filter: opacity(0.4);
+    
 }
 .sy_icons{
     width: 20px;
@@ -48,10 +48,14 @@ body{
 .sy_image_contain{
     width: 100%;
     height: 100%;
+    filter: opacity(0.4);
 }
 /* DISPLAY CLASSES  */
 .sy-d-off{
     display: none;
+}
+.sy-active{
+    display: inline!important;
 }
 .sy-active-thumb{
     border: 2px solid white!important;
