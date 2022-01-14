@@ -12,11 +12,20 @@
 <body>
     
     <div class="vh-100 d-flex align-items-center justify-content-center">
-        <div class=" sy_carosello d-flex">
-            <div class="sy_left_image position-relative">
-                <div id="description" class="w-100 h-100 position-absolute d-flex flex-column justify-content-end align-items-end"></div>
+        <div id="app" class=" sy_carosello d-flex">
+            <div  class="sy_left_image position-relative">
+                <!-- IMMAGINE LEFT DA LOOPARE  -->
+                <img v-for="(element,index) in items.img" class="w-100 h-100" :src="items.img[index]">
+
+                <div id="description" class="w-100 h-100 position-absolute d-flex flex-column justify-content-end align-items-end">
+                <!-- TESTO DA LOOPARE  -->
+                </div>
             </div>
             <div class="sy_right_image d-flex flex-column">
+                <!-- IMMAGINE RIGHT DA LOOPARE  -->
+                <div v-for="(element,index) in items.img" class="sy_thumb">
+                    <img class="sy_image_contain" :src="items.img[index]" alt="">
+                </div>
 
                     <a id="prev" class="sy_icons sy-prev-arrow" href="#"><i class=" bi bi-arrow-up-circle-fill"></i></a>
                     <a id="next" class="sy_icons sy-next-arrow" href="#"><i class=" bi bi-arrow-down-circle-fill"></i></a>
@@ -25,7 +34,7 @@
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-<script src="assets/js/javascript.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 <h3 class="text-white"></h1>
 <p class="text-white"></p>

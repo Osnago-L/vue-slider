@@ -1,38 +1,68 @@
-const items = [
-    'assets/img/01.jpg',
-    'assets/img/02.jpg',
-    'assets/img/03.jpg',
-    'assets/img/04.jpg',
-    'assets/img/05.jpg'
-];
+// const data =[
+//     {
+//         'img':'assets/img/01.jpg',
+//         'title':'Svezia',
+//         'text':'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+//     },
+//     {
+//         'img':'assets/img/02.jpg',
+//         'title':'Svizzera',
+//         'text':'Lorem ipsum'
+//     },
+//     {
+//         'img':'assets/img/03.jpg',
+//         'title':'Gran Bretagna',
+//         'text':'Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+//     },
+//     {
+//         'img':'assets/img/04.jpg',
+//         'title':'Germania',
+//         'text':'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,'
+//     },
+//     {
+//         'img':'assets/img/05.jpg',
+//         'title':'Paradise',
+//         'text':'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,'
+//     },
+// ];
 
-const title = [
-    'Svezia',
-    'Svizzera',
-    'Gran Bretagna',
-    'Germania',
-    'Paradise'
-]
-
-const text = [
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-    'Lorem ipsum',
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-    'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-]
 
 
-for(i=0; i<items.length;i++){
-    document.querySelector(".sy_left_image").innerHTML +=(`
-        <img id="img${i+1}" class="w-100 h-100 sy-d-off" src="assets/img/0${i+1}.jpg">
-    `);
-    document.querySelector(".sy_right_image").innerHTML +=(`
-    <div id="imgthumb${i+1}" class="sy_thumb">
-        <img class="sy_image_contain" src="assets/img/0${i+1}.jpg" alt="">
-    </div>
-    `);
-}
+// const items = [
+//     'assets/img/01.jpg',
+//     'assets/img/02.jpg',
+//     'assets/img/03.jpg',
+//     'assets/img/04.jpg',
+//     'assets/img/05.jpg'
+// ];
+
+// const title = [
+//     'Svezia',
+//     'Svizzera',
+//     'Gran Bretagna',
+//     'Germania',
+//     'Paradise'
+// ]
+
+// const text = [
+//     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+//     'Lorem ipsum',
+//     'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+//     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+//     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+// ]
+
+
+// for(i=0; i<items.length;i++){
+//     document.querySelector(".sy_left_image").innerHTML +=(`
+//         <img id="img${i+1}" class="w-100 h-100 sy-d-off" src="assets/img/0${i+1}.jpg">
+//     `);
+//     document.querySelector(".sy_right_image").innerHTML +=(`
+//     <div id="imgthumb${i+1}" class="sy_thumb">
+//         <img class="sy_image_contain" src="assets/img/0${i+1}.jpg" alt="">
+//     </div>
+//     `);
+// }
 const titleTextOutput= [];
 
 for(i=0; i<title.length;i++){
