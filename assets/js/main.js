@@ -25,7 +25,8 @@ var app = new Vue({
             ],
             
         },        
-        activeIndex: 0
+        activeIndex: 0,
+        timer: null
     },
     methods:{
         active:function(index){
@@ -41,13 +42,21 @@ var app = new Vue({
             }
         },
         prevImage:function(){
+            console.log(this.activeIndex);
             this.activeIndex--;
             if(this.activeIndex<0){
                 this.activeIndex=4
             }
         },
-    }
+        play:function(){
+            this.timer = setInterval(this.nextImage, 3000);
+        },
+        stop:function(){
+            clearInterval(this.timer)
+        },
+
+    },
+    created: function(){
+       this.play();
+    }     
 });
-
-
-
